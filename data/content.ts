@@ -387,22 +387,35 @@ export const PROCESS_STEPS = [
   }
 ];
 
-export const TESTIMONIALS = [
+export interface TestimonialItem {
+  id: number;
+  name: string;
+  role: string;
+  company: string;
+  quote: string;
+  service: string;
+  avatar?: string;
+  initials?: string;
+}
+
+export const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 1,
     name: "Marcus Tan",
     role: "Managing Director",
     company: "Apex Nexus Logistics Pte. Ltd.",
     quote: "CGM Advisory overhauled our commercial agreements and corporate secretarial framework. Having our documentation backed by qualified solicitors while receiving strategic business guidance gave our board complete confidence.",
-    service: "Legal Advisory & Corporate Secretarial"
+    service: "Legal Advisory & Corporate Secretarial",
+    avatar: "/avatars/marcus-tan.jpg",
   },
   {
     id: 2,
-    name: "Elena Rostova",
+    name: "Cheryl Neo",
     role: "Chief Executive Officer",
-    company: "Vanguard Tech Innovations",
+    company: "Vanguard Tech Innovations Pte. Ltd.",
     quote: "Expanding our technology company into Singapore was effortless thanks to CGM. They handled our incorporation, tax coordination, and founders' agreements seamlessly in record time.",
-    service: "Corporate Structuring & Incorporation"
+    service: "Corporate Structuring & Incorporation",
+    avatar: "/avatars/elena-rostova.jpg",
   },
   {
     id: 3,
@@ -410,79 +423,89 @@ export const TESTIMONIALS = [
     role: "Chief Financial Officer",
     company: "OmniHealth Asia Group",
     quote: "The corporate finance advisory and cash flow modeling prepared by CGM Advisory proved instrumental in securing our Series A debt facility. Their team is analytical, prompt, and thoroughly professional.",
-    service: "Corporate Finance Advisory"
+    service: "Corporate Finance Advisory",
+    avatar: "/avatars/david-lim.jpg",
   },
   {
     id: 4,
-    name: "Sarah Jenkins",
+    name: "Fiona Teo",
     role: "Head of Marketing & Operations",
-    company: "GreenScale Biopharma",
+    company: "GreenScale Biopharma Pte. Ltd.",
     quote: "From our high-stakes AGM to our regional product launch, CGM’s event planning division executed every detail with military precision. Outstanding coordination and executive-level hospitality.",
-    service: "Event Planning & Management"
+    service: "Event Planning & Management",
+    avatar: "/avatars/sarah-jenkins.jpg",
   },
   {
     id: 5,
-    name: "Kenji Takahashi",
+    name: "Wei Lun Koh",
     role: "Regional Vice President",
-    company: "Sora Robotics (Singapore)",
+    company: "Sora Automation (Singapore) Pte. Ltd.",
     quote: "Finding an advisory firm that provides business consultancy, solicitor-backed documentation, and corporate secretarial all under one roof saved us tens of thousands in disjointed agency fees.",
-    service: "Business Advisory & Documentation"
+    service: "Business Advisory & Documentation",
+    avatar: "/avatars/kenji-takahashi.jpg",
   },
   {
     id: 6,
     name: "Rajesh Nair",
     role: "Co-Founder & COO",
-    company: "FinVertex Solutions",
-    quote: "The valuation advisory service delivered by CGM Advisory was grounded in rigorous empirical data. It formed the bedrock of our cross-border joint venture negotiations with European partners.",
-    service: "Valuation Advisory"
+    company: "FinVertex Solutions Pte. Ltd.",
+    quote: "The valuation advisory service delivered by CGM Advisory was grounded in rigorous empirical data. It formed the bedrock of our cross-border joint venture negotiations with regional partners.",
+    service: "Valuation Advisory",
+    avatar: "/avatars/rajesh-nair.jpg",
   },
   {
     id: 7,
     name: "Clara Wong",
     role: "Director of People & Legal",
-    company: "Aura Creative Studio",
+    company: "Aura Creative Studio Pte. Ltd.",
     quote: "They took away 100% of the headache surrounding our employment contracts, NDAs, and ACRA compliance. True to their word: they handle the documentation while we focus on our business.",
-    service: "Legal Documentation & Compliance"
+    service: "Legal Documentation & Compliance",
+    initials: "CW",
   },
   {
     id: 8,
-    name: "Thomas Becker",
+    name: "Benjamin Teo",
     role: "Principal Partner",
-    company: "Nordic Clean Energy Fund",
+    company: "SingaClean Energy Fund",
     quote: "CGM’s fundraising preparation and virtual data room structuring gave institutional investors immediate clarity. Highly recommended for any firm preparing for an institutional capital raise.",
-    service: "Fundraising & Capital Structuring"
+    service: "Fundraising & Capital Structuring",
+    initials: "BT",
   },
   {
     id: 9,
     name: "Jonathan Chen",
     role: "Group General Counsel",
-    company: "Straits Horizon Holdings",
+    company: "Straits Horizon Holdings Pte. Ltd.",
     quote: "Their solicitor panel brings serious credibility to every commercial dispute and multi-party shareholder agreement. They operate as a true, seamless extension of our legal department.",
-    service: "Legal Advisory Support"
+    service: "Legal Advisory Support",
+    initials: "JC",
   },
   {
     id: 10,
     name: "Priya Sundaram",
     role: "Executive Director",
-    company: "Zenith AgriTech",
+    company: "Zenith AgriTech Pte. Ltd.",
     quote: "CGM Advisory coordinated flawlessly with our statutory accounting firm and tax agents. Their ability to bridge legal drafting with tax realities is a rare and invaluable asset.",
-    service: "Tax Coordination"
+    service: "Tax Coordination",
+    initials: "PS",
   },
   {
     id: 11,
-    name: "Arthur Pendelton",
+    name: "Haris bin Osman",
     role: "Senior Partner",
-    company: "Harborview Merchant Capital",
+    company: "Sentosa Maritime Capital Pte. Ltd.",
     quote: "Their 4-step process—Consultation, Proposal, Execution, Delivery—was followed to the letter. No scope creep, no hidden hourly billing, just outstanding corporate execution.",
-    service: "Our Process"
+    service: "Our Process",
+    initials: "HO",
   },
   {
     id: 12,
     name: "Grace Khoo",
     role: "Founder & Creative Director",
-    company: "Khoo Lifestyle Collective",
+    company: "Khoo Lifestyle Collective Pte. Ltd.",
     quote: "As a fast-scaling SME, we needed guidance on corporate structure and trademark licensing. CGM provided clear, accessible advice without unnecessary jargon. A true partner.",
-    service: "Business Advisory"
+    service: "Business Advisory",
+    avatar: "/avatars/grace-khoo.jpg",
   }
 ];
 

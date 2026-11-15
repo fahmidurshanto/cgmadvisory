@@ -87,7 +87,7 @@ export default function ContactForm({
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       id="contact-form"
-      className="w-full max-w-4xl mx-auto bg-white rounded-3xl shadow-xl border border-slate-200/90 p-8 md:p-12 relative overflow-hidden"
+      className="w-full mx-auto bg-white rounded-3xl shadow-xl border border-slate-200/90 p-8 sm:p-12 lg:p-16 relative overflow-hidden"
     >
       {/* Decorative top accent line with brand gold gradient */}
       <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#07162c] via-amber-400 to-[#07162c]"></div>
@@ -227,16 +227,18 @@ export default function ContactForm({
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-4 px-8 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 disabled:opacity-70 text-slate-950 font-bold text-base transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-amber-500/25 flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full py-4 px-8 rounded-full bg-gradient-to-r from-[#07162c] via-[#0b2545] to-[#134074] hover:from-[#0b2545] hover:to-[#1e56a0] disabled:opacity-70 text-white font-bold text-base transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-0.5 border border-amber-500/30 flex items-center justify-center gap-3 cursor-pointer group"
           >
             {loading ? (
               <>
-                <Loader2 className="w-5 h-5 animate-spin" />
+                <Loader2 className="w-5 h-5 animate-spin text-amber-400" />
                 <span>Sending details to admin@cgmadvisorypteltd.com...</span>
               </>
             ) : (
               <>
-                <Send className="w-5 h-5" />
+                <div className="w-7 h-7 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:bg-amber-300 shadow-sm">
+                  <Send className="w-3.5 h-3.5" />
+                </div>
                 <span>Submit Consultation Request</span>
               </>
             )}

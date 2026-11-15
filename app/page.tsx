@@ -1,4 +1,4 @@
-import HeroHeadline from "@/components/HeroHeadline";
+import AnnouncementBar from "@/components/AnnouncementBar";
 import HeroSlider from "@/components/HeroSlider";
 import ServicesOverview from "@/components/ServicesOverview";
 import WhyChooseSection from "@/components/WhyChooseSection";
@@ -9,10 +9,10 @@ import ContactForm from "@/components/ContactForm";
 export default function Home() {
   return (
     <div>
-      {/* 1. Full-Screen Grand Corporate Headline Section with Singapore Skyline */}
-      <HeroHeadline />
+      {/* Tiny Executive Announcement / Purpose Bar */}
+      <AnnouncementBar />
 
-      {/* 2. BDO-Style 9-Service Dynamic Slideshow */}
+      {/* 1. BDO-Style 9-Service Dynamic Slideshow */}
       <HeroSlider />
 
       {/* 3. Vistra-Style Bento Grid 9-Service Overview */}

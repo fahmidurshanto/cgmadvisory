@@ -65,10 +65,12 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/book-consultation"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-sm shadow-md hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-200"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#07162c] via-[#0b2545] to-[#134074] hover:from-[#0b2545] hover:to-[#1e56a0] text-white font-bold text-sm shadow-md hover:shadow-xl hover:-translate-y-0.5 border border-amber-500/30 transition-all duration-300 group"
             >
               <span>Book Consultation</span>
-              <ArrowRight className="w-4 h-4" />
+              <div className="w-5 h-5 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:bg-amber-300 shadow-sm">
+                <ArrowRight className="w-3 h-3" />
+              </div>
             </Link>
           </div>
 
@@ -101,10 +103,10 @@ export default function Header() {
               <Link
                 href="/book-consultation"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-bold text-sm shadow-md"
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-[#07162c] via-[#0b2545] to-[#134074] hover:from-[#0b2545] hover:to-[#1e56a0] text-white font-bold text-sm shadow-md border border-amber-500/30"
               >
                 <span>Book Consultation</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-amber-400" />
               </Link>
             </div>
           </div>
