@@ -77,7 +77,7 @@ const slideMedia = [
 export default function HeroSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [direction, setDirection] = useState(1); // 1 = next, -1 = prev
+  const [direction, setDirection] = useState(1);
 
   // 7.5 seconds automatic transition
   useEffect(() => {
@@ -107,7 +107,7 @@ export default function HeroSlider() {
   const IconComponent = iconMap[currentService.icon] || Briefcase;
   const currentMedia = slideMedia[currentIndex % slideMedia.length];
 
-  // Dynamic 3-thumbnail sliding window: always keeps current in view
+  // Dynamic 3-thumbnail sliding window
   const getVisibleThumbnails = () => {
     const total = SERVICES.length;
     const items = [];
@@ -121,16 +121,9 @@ export default function HeroSlider() {
   const visibleThumbnails = getVisibleThumbnails();
 
   return (
-    <section className="relative w-full bg-[#f8fafc] overflow-hidden border-b border-slate-200">
-      {/* Top Banner introducing CGM Advisory - Light Clean Theme */}
-      <div className="h-9 bg-slate-100 text-slate-700 px-4 text-center border-b border-slate-200 flex items-center justify-center shrink-0">
-        <p className="text-xs sm:text-sm font-medium tracking-wide truncate">
-          <span className="text-[#0b2545] font-bold">CGM Advisory Pte. Ltd.</span> — Strategic Business &amp; Legal Solutions for a Changing World
-        </p>
-      </div>
-
-      {/* Main Hero Slider Container with LOCKED & CONSISTENT HEIGHT across all screens */}
-      <div className="relative w-full h-[720px] md:h-[640px] lg:h-[620px] xl:h-[640px] flex flex-col justify-between overflow-hidden bg-[#f8fafc]">
+    <section id="services-slideshow" className="relative w-full bg-white overflow-hidden border-b border-slate-200">
+      {/* 2. BDO-STYLE 9-SERVICE INTERACTIVE SLIDESHOW */}
+      <div className="relative w-full h-[680px] md:h-[600px] lg:h-[580px] xl:h-[600px] flex flex-col justify-between overflow-hidden bg-[#f8fafc]">
         {/* RIGHT SIDE: Real Background Image with BDO-style Slanted Diagonal Mask & Natural Light */}
         <div
           className="absolute inset-y-0 right-0 w-full lg:w-[62%] overflow-hidden"
@@ -147,7 +140,7 @@ export default function HeroSlider() {
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1.0] }}
               className="absolute inset-0 w-full h-full"
             >
-              {/* Natural High Resolution Image without heavy black tint */}
+              {/* Natural High Resolution Image */}
               <Image
                 src={currentMedia.image}
                 alt={currentService.title}
@@ -156,13 +149,13 @@ export default function HeroSlider() {
                 className="object-cover object-center"
               />
 
-              {/* Gentle, soft vignette gradient - gives high clarity to photograph */}
+              {/* Gentle, soft vignette gradient */}
               <div className="absolute inset-0 bg-gradient-to-r from-slate-900/60 via-slate-900/25 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
             </motion.div>
           </AnimatePresence>
 
-          {/* Angular Gold Accent Wedge on Far Right (Mirroring BDO branding geometry) */}
+          {/* Angular Gold Accent Wedge on Far Right */}
           <div
             className="absolute top-0 right-0 h-full w-28 sm:w-44 bg-gradient-to-l from-amber-500/50 via-amber-600/20 to-transparent pointer-events-none z-10"
             style={{
@@ -170,7 +163,7 @@ export default function HeroSlider() {
             }}
           />
 
-          {/* Prominent Service Graphic Callout on the Image with ample left breathing room */}
+          {/* Prominent Service Graphic Callout on the Image */}
           <div className="relative z-10 h-full flex flex-col justify-center max-w-lg text-white text-center sm:text-left pl-14 sm:pl-28 lg:pl-36 pr-6 space-y-4">
             <AnimatePresence mode="wait">
               <motion.div
@@ -207,7 +200,7 @@ export default function HeroSlider() {
         </div>
 
         {/* LEFT SIDE: Content Area with Crisp Off-White Background & High Contrast Typography */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6 md:pt-10 lg:pt-12 flex-1 flex flex-col justify-start">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6 md:pt-8 flex-1 flex flex-col justify-start">
           <div className="max-w-xl lg:max-w-lg">
             <AnimatePresence mode="wait">
               <motion.div
@@ -229,37 +222,39 @@ export default function HeroSlider() {
                 </div>
 
                 {/* Service Name & Icon Header with RESERVED MIN-HEIGHT */}
-                <div className="flex items-start gap-3 sm:gap-4 min-h-[80px] sm:min-h-[100px] lg:min-h-[110px]">
+                <div className="flex items-start gap-3 sm:gap-4 min-h-[75px] sm:min-h-[90px] lg:min-h-[100px]">
                   <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-amber-50 border border-amber-200 text-amber-700 flex items-center justify-center shrink-0 shadow-sm mt-1">
                     <IconComponent className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div className="flex-1">
-                    <h1 className="text-2xl sm:text-4xl lg:text-[40px] font-black text-[#07162c] tracking-tight leading-[1.15]">
+                    <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-black text-[#07162c] tracking-tight leading-[1.15]">
                       {currentService.title}
-                    </h1>
+                    </h2>
                   </div>
                 </div>
 
                 {/* One-line Description with RESERVED MIN-HEIGHT */}
-                <div className="min-h-[56px] sm:min-h-[64px] flex items-center">
+                <div className="min-h-[50px] sm:min-h-[58px] flex items-center">
                   <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal line-clamp-3">
                     {currentService.shortDescription}
                   </p>
                 </div>
 
-                {/* Primary "Learn more" CTA Link */}
-                <div className="pt-1 flex items-center gap-3 sm:gap-4">
+                {/* Primary & Secondary Action CTAs */}
+                <div className="pt-2 flex items-center gap-3 sm:gap-4 flex-wrap">
                   <Link
                     href={`/services/${currentService.slug}`}
-                    className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-none bg-[#0b2545] hover:bg-[#07162c] text-white font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-200 shadow-md group border-l-4 border-amber-400 hover:border-amber-300"
+                    className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-gradient-to-r from-[#07162c] via-[#0b2545] to-[#134074] hover:from-[#0b2545] hover:to-[#1e56a0] text-white font-bold text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 group border border-amber-500/30"
                   >
-                    <span>Learn more</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-amber-400" />
+                    <span>Learn More</span>
+                    <div className="w-6 h-6 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1 group-hover:bg-amber-300">
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </div>
                   </Link>
 
                   <Link
                     href="/book-consultation"
-                    className="inline-flex items-center justify-center px-5 sm:px-6 py-3.5 sm:py-4 rounded-none border border-slate-300 bg-white hover:border-[#0b2545] text-[#07162c] font-bold text-xs sm:text-sm tracking-wider uppercase transition-all hover:bg-slate-50 shadow-sm"
+                    className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-full border border-slate-300 bg-white hover:bg-slate-50 hover:border-[#0b2545] text-[#07162c] font-bold text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5"
                   >
                     Book Consultation
                   </Link>
@@ -281,7 +276,7 @@ export default function HeroSlider() {
               <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
 
-            {/* Thumbnail Preview Strip (EXACTLY 3 WITH SPRING TRANSITIONS) */}
+            {/* Thumbnail Preview Strip */}
             <div className="flex items-center gap-2 sm:gap-2.5 overflow-hidden py-1">
               {visibleThumbnails.map(({ service, originalIndex }, idx) => {
                 const isSelected = originalIndex === currentIndex;
@@ -302,7 +297,6 @@ export default function HeroSlider() {
                         : "border-slate-300 hover:border-slate-500 opacity-85 hover:opacity-100"
                     }`}
                     style={{
-                      // Give the 3rd (last visible) thumbnail the subtle BDO diagonal cut
                       clipPath:
                         idx === 2
                           ? "polygon(0 0, 84% 0, 100% 100%, 0 100%)"
