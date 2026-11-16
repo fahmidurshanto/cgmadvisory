@@ -29,13 +29,6 @@ export default function Footer() {
             <p className="text-slate-400 text-xs leading-relaxed">
               Strategic business consultancy, solicitor-backed legal documentation, corporate services, and event management under one roof in Singapore.
             </p>
-
-            <div className="pt-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/90 border border-amber-500/30 text-[11px] text-amber-300">
-                <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
-                ACRA Reg. &amp; Solicitor-Backed Network
-              </span>
-            </div>
           </div>
 
           {/* Column 2: Quick Links */}
@@ -121,10 +114,6 @@ export default function Footer() {
                 >
                   admin@cgmadvisorypteltd.com
                 </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Globe className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>Mon – Fri: 9:00 AM – 6:00 PM (SGT)</span>
               </li>
             </ul>
 

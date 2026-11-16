@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   CheckCircle2, 
@@ -84,16 +85,17 @@ export default function OurProcessPage() {
               style={{ backgroundColor: activeOrb.color }}
             />
 
-            {/* Central Brand Apex Logo Shield */}
-            <div className="absolute z-30 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-2xl border-4 border-slate-100 flex items-center justify-center pointer-events-none">
-              <div 
-                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-white font-black text-xs uppercase tracking-tighter shadow-inner transition-colors duration-500"
-                style={{ backgroundColor: activeOrb.color }}
-              >
-                <div className="flex flex-col items-center">
-                  <span className="font-extrabold text-sm sm:text-base">CGM</span>
-                  <span className="text-[8px] tracking-widest text-amber-300">PROCESS</span>
-                </div>
+            {/* Central Brand Apex Logo Shield (Official CGM Logo) */}
+            <div className="absolute z-30 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-2xl border-4 border-slate-100 flex items-center justify-center pointer-events-none p-2.5 overflow-hidden">
+              <div className="relative w-full h-full flex items-center justify-center">
+                <Image
+                  src="/logo.png"
+                  alt="CGM Advisory Logo"
+                  width={90}
+                  height={60}
+                  className="w-full h-auto object-contain max-h-16"
+                  priority
+                />
               </div>
             </div>
 

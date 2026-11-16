@@ -45,7 +45,7 @@ const slideMedia = [
     statBadge: "Solicitor Panel Backed Documentation",
   },
   {
-    image: "/slides/service-3-corporate-secretarial.jpg",
+    image: "/slides/service-3-corporate-secretarial.png",
     statBadge: "ACRA Statutory Compliance & Governance",
   },
   {
@@ -288,11 +288,10 @@ export default function HeroSlider() {
                       setCurrentIndex(originalIndex);
                     }}
                     transition={{ type: "spring", stiffness: 450, damping: 35 }}
-                    className={`relative w-28 sm:w-36 md:w-40 h-16 sm:h-20 md:h-22 p-2 text-left transition-colors duration-200 cursor-pointer overflow-hidden border shrink-0 ${
-                      isSelected
-                        ? "border-amber-500 shadow-xl ring-2 ring-amber-400/50 scale-102"
-                        : "border-slate-300 hover:border-slate-500 opacity-85 hover:opacity-100"
-                    }`}
+                    className={`relative w-28 sm:w-36 md:w-40 h-16 sm:h-20 md:h-22 p-2 text-left transition-colors duration-200 cursor-pointer overflow-hidden border shrink-0 ${isSelected
+                      ? "border-amber-500 shadow-xl ring-2 ring-amber-400/50 scale-102"
+                      : "border-slate-300 hover:border-slate-500 opacity-85 hover:opacity-100"
+                      }`}
                     style={{
                       clipPath:
                         idx === 2
