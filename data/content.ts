@@ -281,7 +281,17 @@ export const SERVICES: ServiceItem[] = [
   }
 ];
 
-export const WHY_CHOOSE_ITEMS = [
+export interface WhyChooseItem {
+  slug: string;
+  title: string;
+  subtitle: string;
+  shortDesc: string;
+  description: string;
+  highlights: string[];
+  icon: string;
+}
+
+export const WHY_CHOOSE_ITEMS: WhyChooseItem[] = [
   {
     slug: "documentation-focus",
     title: "We handle the documentation — you focus on your business.",

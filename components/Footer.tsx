@@ -134,10 +134,6 @@ export default function Footer() {
           <p>© 2026 CGM Advisory Pte. Ltd. All rights reserved.</p>
           <p className="flex items-center gap-4">
             <span>Singapore Registration No. 202300000X</span>
-            <span>·</span>
-            <span>Privacy Policy</span>
-            <span>·</span>
-            <span>Terms of Engagement</span>
           </p>
         </div>
       </div>
