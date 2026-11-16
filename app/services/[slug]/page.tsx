@@ -39,39 +39,68 @@ const iconMap: Record<string, React.ElementType> = {
 // High-resolution photography thumbnail mapping for each service
 const serviceThumbnailMap: Record<string, { image: string; statBadge: string }> = {
   "business-advisory": {
-    image: "/slides/service-1-business-advisory.jpg",
+    image: "/services/business-advisory.jpg",
     statBadge: "Singapore & Regional Market Expansion",
   },
-  "legal-advisory": {
-    image: "/slides/service-2-legal-advisory.jpg",
+  "legal-advisory-documentation-support": {
+    image: "/services/legal-advisory.jpg",
     statBadge: "Solicitor Panel Backed Documentation",
   },
-  "corporate-secretarial": {
-    image: "/slides/service-3-corporate-secretarial.jpg",
+  "corporate-secretarial-services": {
+    image: "/services/corporate-secretarial.jpg",
     statBadge: "ACRA Statutory Compliance & Governance",
   },
   "corporate-structuring-incorporation": {
-    image: "/slides/service-4-corporate-structuring.jpg",
+    image: "/services/corporate-structuring.jpg",
     statBadge: "Singapore Company Incorporation",
   },
+  "corporate-finance-advisory": {
+    image: "/services/corporate-finance.jpg",
+    statBadge: "Cash Flow & Capital Allocation",
+  },
+  "fundraising-capital-structuring": {
+    image: "/services/fundraising.jpg",
+    statBadge: "Debt, Equity & Private Capital Advisory",
+  },
+  "valuation-advisory": {
+    image: "/services/valuation-advisory.jpg",
+    statBadge: "DCF & Valuation Modeling",
+  },
+  "tax-coordination": {
+    image: "/services/tax-coordination.jpg",
+    statBadge: "IRAS Alignment & Tax Agents Liaison",
+  },
+  "event-planning-management": {
+    image: "/services/event-management.jpg",
+    statBadge: "AGMs, Investor Days & Executive Summits",
+  },
+  // Fallback aliases for legacy slugs
+  "legal-advisory": {
+    image: "/services/legal-advisory.jpg",
+    statBadge: "Solicitor Panel Backed Documentation",
+  },
+  "corporate-secretarial": {
+    image: "/services/corporate-secretarial.jpg",
+    statBadge: "ACRA Statutory Compliance & Governance",
+  },
   "corporate-finance": {
-    image: "/slides/service-5-corporate-finance.jpg",
+    image: "/services/corporate-finance.jpg",
     statBadge: "Cash Flow & Capital Allocation",
   },
   "fundraising": {
-    image: "/slides/service-6-fundraising.jpg",
+    image: "/services/fundraising.jpg",
     statBadge: "Debt, Equity & Private Capital Advisory",
   },
   "valuation-due-diligence": {
-    image: "/slides/service-7-valuation.jpg",
+    image: "/services/valuation-advisory.jpg",
     statBadge: "DCF & Valuation Modeling",
   },
   "tax-accounting-coordination": {
-    image: "/slides/service-8-tax-coordination.jpg",
+    image: "/services/tax-coordination.jpg",
     statBadge: "IRAS Alignment & Tax Agents Liaison",
   },
   "event-management": {
-    image: "/slides/service-9-event-management.jpg",
+    image: "/services/event-management.jpg",
     statBadge: "AGMs, Investor Days & Executive Summits",
   },
 };
