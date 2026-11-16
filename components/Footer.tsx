@@ -101,12 +101,17 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <span>
-                  1 Raffles Place, #28-00 One Raffles Place, Singapore 048616
+                  44 Bendemeer Road, #04-1470, Singapore 330044
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>+65 6712 8890</span>
+                <a
+                  href="tel:+6589845965"
+                  className="hover:text-amber-400 transition-colors"
+                >
+                  +65 8984 5965
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-amber-400 shrink-0" />

@@ -151,9 +151,6 @@ export default function TestimonialsSlider() {
                       <div className="font-black text-[#07162c] text-sm sm:text-base truncate">
                         {t.name}
                       </div>
-                      <div className="text-xs text-slate-500 font-medium truncate">
-                        {t.role}, <span className="font-bold text-slate-700">{t.company}</span>
-                      </div>
                     </div>
                   </div>
                 </div>

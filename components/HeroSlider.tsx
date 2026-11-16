@@ -185,7 +185,7 @@ export default function HeroSlider() {
 
                 <div className="space-y-1.5 min-h-[90px] flex flex-col justify-center">
                   <span className="text-xs font-mono text-amber-300 uppercase tracking-widest block font-bold drop-shadow">
-                    Service {currentService.code} · {currentService.category}
+                    {currentService.category}
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug drop-shadow-lg line-clamp-2">
                     {currentService.title}
@@ -211,13 +211,10 @@ export default function HeroSlider() {
                 transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 className="space-y-4 sm:space-y-5"
               >
-                {/* Category / Code Badge */}
+                {/* Category Badge */}
                 <div className="flex items-center gap-2">
                   <span className="px-3.5 py-1 rounded bg-[#0b2545] text-amber-400 text-xs font-extrabold uppercase tracking-wider shadow-sm">
                     {currentService.category}
-                  </span>
-                  <span className="text-xs font-mono font-bold text-slate-500">
-                    CODE {currentService.code}
                   </span>
                 </div>
 
@@ -315,17 +312,7 @@ export default function HeroSlider() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/50 to-transparent" />
 
                     {/* Content inside thumbnail */}
-                    <div className="relative z-10 h-full flex flex-col justify-between">
-                      <div className="flex items-center justify-between">
-                        <span
-                          className={`text-[9px] font-mono font-bold px-1 rounded ${
-                            isSelected ? "bg-amber-400 text-slate-950" : "bg-black/50 text-white"
-                          }`}
-                        >
-                          {service.code}
-                        </span>
-                      </div>
-
+                    <div className="relative z-10 h-full flex flex-col justify-end">
                       <div className="truncate">
                         <span className="text-[10px] sm:text-[11px] font-bold text-white block truncate leading-tight drop-shadow">
                           {service.title}

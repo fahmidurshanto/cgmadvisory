@@ -36,7 +36,7 @@ export default function BookConsultationPage() {
                 <MapPin className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-slate-900 block">Singapore Office</span>
-                  <span>1 Raffles Place, #28-00 One Raffles Place, Singapore 048616</span>
+                  <span>44 Bendemeer Road, #04-1470, Singapore 330044</span>
                 </div>
               </div>
 
@@ -57,7 +57,12 @@ export default function BookConsultationPage() {
                 <Phone className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-slate-900 block">Direct Telephone</span>
-                  <span>+65 6712 8890</span>
+                  <a
+                    href="tel:+6589845965"
+                    className="text-slate-600 hover:text-blue-600 hover:underline transition-colors"
+                  >
+                    +65 8984 5965
+                  </a>
                 </div>
               </div>
 

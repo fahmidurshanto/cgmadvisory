@@ -5,9 +5,9 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { name, email, phone, company, service, message } = body;
 
-    if (!name || !email || !message) {
+    if (!name || !email || !phone || !company || !message) {
       return NextResponse.json(
-        { error: "Name, email, and message are required fields." },
+        { error: "Please fill in all required fields (Full Name, Work Email, Contact Number, Company, and Requirements)." },
         { status: 400 }
       );
     }

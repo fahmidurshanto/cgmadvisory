@@ -21,7 +21,7 @@ export default function ContactForm({
     email: "",
     phone: "",
     company: "",
-    service: preselectedService || "",
+    service: preselectedService || "General Corporate Consultation",
     message: ""
   });
 
@@ -61,7 +61,7 @@ export default function ContactForm({
           email: "",
           phone: "",
           company: "",
-          service: preselectedService || "",
+          service: preselectedService || "General Corporate Consultation",
           message: ""
         });
       } else {
@@ -159,27 +159,29 @@ export default function ContactForm({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="phone" className="block text-xs font-bold uppercase tracking-wider text-[#07162c] mb-2">
-                Contact Number
+                Contact Number <span className="text-rose-500">*</span>
               </label>
               <input
                 id="phone"
                 name="phone"
                 type="tel"
+                required
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="+65 6123 4567"
+                placeholder="+65 8984 5965"
                 className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500/30 focus:border-amber-500 transition text-sm text-slate-900"
               />
             </div>
 
             <div>
               <label htmlFor="company" className="block text-xs font-bold uppercase tracking-wider text-[#07162c] mb-2">
-                Company / Organization
+                Company / Organization <span className="text-rose-500">*</span>
               </label>
               <input
                 id="company"
                 name="company"
                 type="text"
+                required
                 value={formData.company}
                 onChange={handleChange}
                 placeholder="Company Name Pte. Ltd."
@@ -190,16 +192,17 @@ export default function ContactForm({
 
           <div>
             <label htmlFor="service" className="block text-xs font-bold uppercase tracking-wider text-[#07162c] mb-2">
-              Primary Area of Interest
+              Primary Area of Interest <span className="text-rose-500">*</span>
             </label>
             <select
               id="service"
               name="service"
+              required
               value={formData.service}
               onChange={handleChange}
               className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500/30 focus:border-amber-500 transition text-sm text-slate-900"
             >
-              <option value="">General Corporate Consultation</option>
+              <option value="General Corporate Consultation">General Corporate Consultation</option>
               {SERVICES.map((s) => (
                 <option key={s.id} value={s.title}>
                   {s.title} ({s.category})

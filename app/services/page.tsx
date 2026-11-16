@@ -80,9 +80,6 @@ export default function ServicesPage() {
                           <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <Icon className="w-6 h-6" />
                           </div>
-                          <span className="text-xs font-mono text-slate-400">
-                            CODE {service.code}
-                          </span>
                         </div>
 
                         <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
