@@ -47,7 +47,13 @@ export default function ContactForm({
         body: JSON.stringify(formData)
       });
 
-      const data = await res.json();
+      let data: any = {};
+      try {
+        data = await res.json();
+      } catch {
+        // Server returned non-JSON (crash/HTML error page)
+        data = { error: "Server error. Please email admin@cgmadvisorypteltd.com directly." };
+      }
 
       if (res.ok) {
         setStatus({
